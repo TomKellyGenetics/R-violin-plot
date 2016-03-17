@@ -69,9 +69,9 @@ my.vioplot <- function (x, ..., range = 1.5, h = NULL, ylim = NULL, names = NULL
               lty = lty, lwd = lwd)
       if (drawRect) {
         lines(at[c(i, i)], c(lower[i], upper[i]), lwd = lwd, 
-              lty = lty, col = lineCol)
+              lty = lty, col = lineCol[i])
         rect(at[i] - boxwidth/2, q1[i], at[i] + boxwidth/2, 
-             q3[i], col = rectCol, border = lineCol)
+             q3[i], col = rectCol[i], border = lineCol[i])
         points(at[i], med[i], pch = pchMed, col = colMed)
       }
     }
@@ -89,9 +89,9 @@ my.vioplot <- function (x, ..., range = 1.5, h = NULL, ylim = NULL, names = NULL
               lty = lty, lwd = lwd)
       if (drawRect) {
         lines(c(lower[i], upper[i]), at[c(i, i)], lwd = lwd, 
-              lty = lty, col = lineCol)
+              lty = lty, col = lineCol[i])
         rect(q1[i], at[i] - boxwidth/2, q3[i], at[i] + 
-               boxwidth/2, col = rectCol, border = lineCol)
+               boxwidth/2, col = rectCol[i], border = lineCol[i])
         points(med[i], at[i], pch = pchMed, col = colMed)
       }
     }
