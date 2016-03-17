@@ -8,5 +8,5 @@ additional parameters:
 
 `lineCol` - added control of boxplot border and lines with vectorised colours for each violin as above
 
-`main`,` sub` - added title specfication within function for consistency with familiar usage, e.g., with boxplot / beanplot
+`main`,` sub`, `xlab`, `ylab` - added title specfication within function for consistency with familiar usage, e.g., with boxplot / beanplot
 
