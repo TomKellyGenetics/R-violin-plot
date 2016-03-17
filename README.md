@@ -10,3 +10,14 @@ additional parameters:
 
 `main`,` sub`, `xlab`, `ylab` - added title specfication within function for consistency with familiar usage, e.g., with boxplot / beanplot
 
+Clone to local machine with
+
+`cd <working_dir>`
+
+`git clone git@github.com:TomKellyGenetics/R-violin-plot.git`
+
+Load function into R with
+
+`source("<working_dir>/R-violin-plot/my.vioplot.R"`
+
+Run `my.vioplot()` as you would `vioplot()` with additional graphical parameters intended to be familiar to `boxplot()` users
