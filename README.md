@@ -18,6 +18,9 @@ Clone to local machine with
 
 Load function into R with
 
-`source("<working_dir>/R-violin-plot/my.vioplot.R"`
+`source("<working_dir>/R-violin-plot/my.vioplot.R")`
 
 Run `my.vioplot()` as you would `vioplot()` with additional graphical parameters intended to be familiar to `boxplot()` users
+
+
+Note for novices: it is not advisable to clone a git repo into a directory already tracked with git / version control. It is acceptable to use <working_dir> as the working directory of your R session but only if this directory is not already tracked by Git or RStudio Projects. If you are using version control for your R session please use another directory to source this script. 
