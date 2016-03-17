@@ -1,3 +1,8 @@
+This repository has been superseeded by an R package (created with `devtools` and `roxygen2`).
+
+**Please use the following repository for to install the package with devtools**
+https://github.com/TomKellyGenetics/vioplotx
+
 Modifications to the vioplot R package: https://cran.r-project.org/web/packages/vioplot/index.html
 
 Citation of original packge:
