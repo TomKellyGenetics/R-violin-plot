@@ -1,6 +1,6 @@
 my.vioplot <- function (x, ..., range = 1.5, h = NULL, ylim = NULL, names = NULL, 
           horizontal = FALSE, col = "grey50", border = "black", lty = 1, 
-          lwd = 1, rectCol = "black", colMed = "white", pchMed = 19, 
+          lwd = 1, rectCol = "black", lineCol = "black", colMed = "white", pchMed = 19, 
           at, add = FALSE, wex = 1, drawRect = TRUE) 
 {
   datas <- list(x, ...)
@@ -69,7 +69,7 @@ my.vioplot <- function (x, ..., range = 1.5, h = NULL, ylim = NULL, names = NULL
               lty = lty, lwd = lwd)
       if (drawRect) {
         lines(at[c(i, i)], c(lower[i], upper[i]), lwd = lwd, 
-              lty = lty)
+              lty = lty, col = lineCol)
         rect(at[i] - boxwidth/2, q1[i], at[i] + boxwidth/2, 
              q3[i], col = rectCol)
         points(at[i], med[i], pch = pchMed, col = colMed)
@@ -89,7 +89,7 @@ my.vioplot <- function (x, ..., range = 1.5, h = NULL, ylim = NULL, names = NULL
               lty = lty, lwd = lwd)
       if (drawRect) {
         lines(c(lower[i], upper[i]), at[c(i, i)], lwd = lwd, 
-              lty = lty)
+              lty = lty, col = lineCol)
         rect(q1[i], at[i] - boxwidth/2, q3[i], at[i] + 
                boxwidth/2, col = rectCol)
         points(med[i], at[i], pch = pchMed, col = colMed)
