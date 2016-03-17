@@ -1,7 +1,7 @@
 my.vioplot <- function (x, ..., range = 1.5, h = NULL, ylim = NULL, names = NULL, 
           horizontal = FALSE, col = "grey50", border = "black", lty = 1, 
           lwd = 1, rectCol = "black", lineCol = "black", colMed = "white", pchMed = 19, 
-          at, add = FALSE, wex = 1, drawRect = TRUE) 
+          at, add = FALSE, wex = 1, drawRect = TRUE, main=NA) 
 {
   datas <- list(x, ...)
   n <- length(datas)
@@ -98,4 +98,7 @@ my.vioplot <- function (x, ..., range = 1.5, h = NULL, ylim = NULL, names = NULL
   }
   invisible(list(upper = upper, lower = lower, median = med, 
                  q1 = q1, q3 = q3))
+  if(is.na(main)==F){
+    title(main=main, sub=sub)
+  }
 }
