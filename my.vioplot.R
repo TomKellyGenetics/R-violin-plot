@@ -71,7 +71,7 @@ my.vioplot <- function (x, ..., range = 1.5, h = NULL, ylim = NULL, names = NULL
         lines(at[c(i, i)], c(lower[i], upper[i]), lwd = lwd, 
               lty = lty, col = lineCol)
         rect(at[i] - boxwidth/2, q1[i], at[i] + boxwidth/2, 
-             q3[i], col = rectCol)
+             q3[i], col = rectCol, border = lineCol)
         points(at[i], med[i], pch = pchMed, col = colMed)
       }
     }
@@ -91,7 +91,7 @@ my.vioplot <- function (x, ..., range = 1.5, h = NULL, ylim = NULL, names = NULL
         lines(c(lower[i], upper[i]), at[c(i, i)], lwd = lwd, 
               lty = lty, col = lineCol)
         rect(q1[i], at[i] - boxwidth/2, q3[i], at[i] + 
-               boxwidth/2, col = rectCol)
+               boxwidth/2, col = rectCol, border = lineCol)
         points(med[i], at[i], pch = pchMed, col = colMed)
       }
     }
