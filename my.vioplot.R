@@ -1,7 +1,7 @@
 my.vioplot <- function (x, ..., range = 1.5, h = NULL, ylim = NULL, names = NULL, 
           horizontal = FALSE, col = "grey50", border = "black", lty = 1, 
           lwd = 1, rectCol = "black", lineCol = "black", colMed = "white", pchMed = 19, 
-          at, add = FALSE, wex = 1, drawRect = TRUE, main=NA, sub=NA) 
+          at, add = FALSE, wex = 1, drawRect = TRUE, main=NA, sub=NA, xlab=NA, ylab=NA) 
 {
   datas <- list(x, ...)
   n <- length(datas)
@@ -98,11 +98,41 @@ my.vioplot <- function (x, ..., range = 1.5, h = NULL, ylim = NULL, names = NULL
   }
   invisible(list(upper = upper, lower = lower, median = med, 
                  q1 = q1, q3 = q3))
-  if(is.na(main)==F){
-    if(is.na(sub)==T){
-      title(main=main)
+  if(is.na(xlab)==F){
+    if(is.na(ylab)==F){
+      if(is.na(main)==F){
+        if(is.na(sub)==T){
+          title(main=main, ylab=ylab, xlab=xlab)
+        } else{
+          title(main=main, sub=sub, ylab=ylab, xlab=xlab)
+        }
+      }
     } else{
-    title(main=main, sub=sub)
+      if(is.na(main)==F){
+          if(is.na(sub)==T){
+            title(main=main, xlab=xlab)
+          } else{
+            title(main=main, sub=sub, xlab=xlab)
+          }
+        }
+    }
+  } else {  
+    if(is.na(ylab)==F){
+      if(is.na(main)==F){
+        if(is.na(sub)==T){
+          title(main=main, ylab=ylab)
+        } else{
+          title(main=main, sub=sub, ylab=ylab)
+        }
+      }
+    } else{
+      if(is.na(main)==F){
+        if(is.na(sub)==T){
+          title(main=main)
+        } else{
+          title(main=main, sub=sub)
+        }
+      }
     }
   }
 }
