@@ -99,4 +99,3 @@ my.vioplot <- function (x, ..., range = 1.5, h = NULL, ylim = NULL, names = NULL
   invisible(list(upper = upper, lower = lower, median = med, 
                  q1 = q1, q3 = q3))
 }
-
